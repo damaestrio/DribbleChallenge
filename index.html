@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dribble Gallery!</title>
+	<style type="text/css">
+		html,body {
+			background-color:#65A5D1;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}	
+		
+		div.button{
+			font-weight:bold; 
+			cursor:pointer;
+		}
+		
+		span.button{
+			font-weight:bold; 
+			cursor:pointer;
+		}		
+	</style>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="api.js"></script>
+</head>
+<body onload="callAPI(selectedType)">	
+	<div id="header" align="center" style="padding:10px;">
+		<div style="width:900px; padding:5px; background-color:#03406A" align="left">
+			<span class='button' id='everyoneButton' style="padding:20px; color:#FFCE40;" onclick="changeType('everyone','everyoneButton')">Everyone</span>
+			<span class='button' id='popularButton' style="padding:20px;" onclick="changeType('popular','popularButton')">Popular</span>
+			<span class='button' id='debutButton' style="padding:20px;" onclick="changeType('debuts','debutButton')">Debut</span>
+		</div>
+	</div>
+	<div id="gallery" align="center"></div>
+	<div id="footer" align="center" style="padding-top:50px;">
+		<div id="moreButton" align="center" class='button' style="background-color:#03406A; width:900px; padding:5px;" onclick="moreImages()">LOAD MORE</div>
+	</div>
+</body>
+</html>
